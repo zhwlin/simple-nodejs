@@ -7,12 +7,12 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'pages/a.html'),
-        secondary: resolve(__dirname, 'pages/b.html'),
+        secondary: resolve(__dirname, 'pages/b.html')
       },
       output: {
-        entryFileNames: '[name].js',
-        chunkFileNames: 'assets/[name].js',
-        assetFileNames: 'assets/[name].[ext]',
+        entryFileNames: 'assets/[name].[hash].js',
+        chunkFileNames: 'assets/[name].[hash].js',
+        assetFileNames: 'assets/[name].[hash].[ext]'
       },
       plugins: [
         createHtmlPlugin({
